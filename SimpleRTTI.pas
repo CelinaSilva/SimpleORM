@@ -715,9 +715,6 @@ begin
         if Attribute is Ignore then
           vIgnore := True;
           
-       if Attribute is Ignore then
-          vIgnore := True;    
-
         if Attribute is AutoInc then
           vIgnore := True;
       end;
@@ -778,6 +775,9 @@ begin
           vCampo := Campo(Attribute).Name;
           
         if Attribute is Ignore then
+          vIgnore := True;
+
+        if Attribute is AutoInc then
           vIgnore := True;
       end;
       if not vIgnore then
